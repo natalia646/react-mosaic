@@ -1,0 +1,1 @@
+export type WindowIds = "a" | "b" | "c";
