@@ -10,3 +10,5 @@ Run project locally:
 
 `npm run dev` - start project locally
 
+
+You can click on 'More' button and select any company in any window
