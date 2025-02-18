@@ -22,7 +22,7 @@ export const MosaicApp = () => {
         "https://67b48a8b392f4aa94fab4ec7.mockapi.io/api/companies/companies"
       )
       .then((res) => {
-        console.log(res.data)
+        console.log(res.data);
         setCompanies(res.data);
       })
       .catch(function (error) {
