@@ -1,6 +1,5 @@
 import { Mosaic, MosaicWindow } from "react-mosaic-component";
-import companiesfromJSON from "../api/companies-lookup.json";
-
+import defaulCompany from "../api/companie-default.json";
 import { WindowIds } from "../types/WindowIds.type";
 import { CompanyDesc } from "./CompanyDesc";
 import { useEffect, useState } from "react";
@@ -8,7 +7,7 @@ import axios from "axios";
 import { Company } from "../types/Company.type";
 
 export const MosaicApp = () => {
-  const [companies, setCompanies] = useState<Company[]>(companiesfromJSON);
+  const [companies, setCompanies] = useState<Company[]>(defaulCompany);
 
   const [selectCompanyId, setSelectCompanyId] = useState({
     a: companies[0].id,
@@ -22,7 +21,6 @@ export const MosaicApp = () => {
         "https://67b48a8b392f4aa94fab4ec7.mockapi.io/api/companies/companies"
       )
       .then((res) => {
-        console.log(res.data);
         setCompanies(res.data);
       })
       .catch(function (error) {
@@ -41,6 +39,7 @@ export const MosaicApp = () => {
     <Mosaic
       renderTile={(id, path) => (
         <MosaicWindow
+          className="scroll-auto"
           path={path}
           additionalControls={
             <select onChange={(e) => handleSelectedCompany(id, e.target.value)}>
