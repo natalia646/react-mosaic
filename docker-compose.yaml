@@ -3,4 +3,4 @@ services:
   app:
     image: mosaic-app
     ports:
-      - 13000:3000
+      - 13000:3000 
