@@ -39,7 +39,6 @@ export const MosaicApp = () => {
     <Mosaic
       renderTile={(id, path) => (
         <MosaicWindow
-          className="scroll-auto"
           path={path}
           additionalControls={
             <select onChange={(e) => handleSelectedCompany(id, e.target.value)}>
