@@ -2,11 +2,11 @@
 
 Run project locally:
 
-`git clone ` + path - clone project
+`git clone https://github.com/natalia646/react-mosaic.git` - clone project
 
-`cd synerge_way` - move to project folder
+`cd react-mosaic` - move to project folder
 
-`npm init` - initialize NPM;
+`npm install` - initialize NPM;
 
 `npm run dev` - start project locally
 
